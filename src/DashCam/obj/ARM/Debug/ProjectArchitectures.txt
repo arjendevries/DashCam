@@ -1,0 +1,1 @@
+C:\PersonalCode\DashCam\DashCam\DashCam.csproj;arm

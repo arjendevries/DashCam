@@ -1,0 +1,11 @@
+/out:"C:\PersonalCode\DashCam\DashCam\obj\ARM\Release\ilc\intermediate\SgGenerated\\"
+/int:"C:\PersonalCode\DashCam\DashCam\obj\ARM\Release\ilc\intermediate\\"
+/ref:"C:\PersonalCode\DashCam\DashCam\obj\ARM\Release\ilc\intermediate\PreMergeILTransformed"
+/ref:"C:\PersonalCode\DashCam\DashCam\obj\ARM\Release\ilc\intermediate\TransformedSRWR"
+/ref:"C:\PersonalCode\DashCam\DashCam\obj\ARM\Release\ilc\in"
+/ref:"C:\PersonalCode\DashCam\DashCam\obj\ARM\Release\ilc\in\\"
+/ref:"C:\PersonalCode\DashCam\DashCam\obj\ARM\Release\ilc\in\\"
+/ref:"C:\Users\arjen.devries\.nuget\packages\microsoft.net.native.compiler\1.7.1\tools\ARM\ilc\lib\Private\\"
+/ref:"C:\PersonalCode\DashCam\DashCam\obj\ARM\Release\ilc\in\WinMetadata"
+/ca:System.Private.CoreLib
+/cscpath:"C:\Users\arjen.devries\.nuget\packages\microsoft.net.native.compiler\1.7.1\tools\ARM\ilc\csc"
