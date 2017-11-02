@@ -1,10 +1,10 @@
 FullName=Microsoft.Build.ILTasks.ILTransformInternalTask
-InputAssembly=C:\PersonalCode\DashCam\DashCam\obj\ARM\Release\ilc\in\System.Runtime.WindowsRuntime.dll
-OutputAssembly=C:\PersonalCode\DashCam\DashCam\obj\ARM\Release\ilc\intermediate\TransformedSRWR\System.Runtime.WindowsRuntime.dll
+InputAssembly=C:\PersonalCode\DashCam\src\DashCam\obj\ARM\Release\ilc\in\System.Runtime.WindowsRuntime.dll
+OutputAssembly=C:\PersonalCode\DashCam\src\DashCam\obj\ARM\Release\ilc\intermediate\TransformedSRWR\System.Runtime.WindowsRuntime.dll
 UseILOutputPrefix=False
 LibPathsCount=2
 LibPath=C:\Users\arjen.devries\.nuget\packages\microsoft.net.native.compiler\1.7.1\tools\ARM\ilc\lib\Private\
-LibPath=C:\PersonalCode\DashCam\DashCam\obj\ARM\Release\ilc\in\
+LibPath=C:\PersonalCode\DashCam\src\DashCam\obj\ARM\Release\ilc\in\
 CoreAssemblyName=System.Private.CoreLib
 SkipWritingTransformedAssembly=False
 DontSaveUnlessChangesMade=False

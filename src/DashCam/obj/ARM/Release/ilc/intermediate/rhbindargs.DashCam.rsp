@@ -6,11 +6,11 @@
 "/nativeLink:C:\Users\arjen.devries\.nuget\packages\microsoft.net.native.compiler\1.7.1\tools\ARM\ilc\lib\Native\vmath.lib"
 /customImports
 /methodBodyFolding
-"C:\PersonalCode\DashCam\DashCam\obj\ARM\Release\ilc\intermediate\MDIL\DashCam.mdilexe"
-"/i:C:\PersonalCode\DashCam\DashCam\obj\ARM\Release\ilc\intermediate\MDIL"
-"/out:C:\PersonalCode\DashCam\DashCam\obj\ARM\Release\ilc\intermediate\Native\DashCam.exe"
-"/pdbAltPath:C:\PersonalCode\DashCam\DashCam\bin\ARM\Release\ilc"
-"/res:C:\PersonalCode\DashCam\DashCam\obj\ARM\Release\ilc\intermediate\Native.res"
+"C:\PersonalCode\DashCam\src\DashCam\obj\ARM\Release\ilc\intermediate\MDIL\DashCam.mdilexe"
+"/i:C:\PersonalCode\DashCam\src\DashCam\obj\ARM\Release\ilc\intermediate\MDIL"
+"/out:C:\PersonalCode\DashCam\src\DashCam\obj\ARM\Release\ilc\intermediate\Native\DashCam.exe"
+"/pdbAltPath:C:\PersonalCode\DashCam\src\DashCam\bin\ARM\Release\ilc"
+"/res:C:\PersonalCode\DashCam\src\DashCam\obj\ARM\Release\ilc\intermediate\Native.res"
 "/i:C:\Users\arjen.devries\.nuget\packages\microsoft.net.native.sharedlibrary-arm\1.7.0\tools\SharedLibrary\ret\MDIL"
 /shimexe
 "/classlib:SharedLibrary"

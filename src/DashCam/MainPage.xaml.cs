@@ -41,7 +41,7 @@ namespace DashCam
 			while (isRecording)
 			{
 				sw.Start();
-				fileName = GenerateFileName("wmv");
+				fileName = GenerateFileName("mp4");
 				var storageFile = await Windows.Storage.KnownFolders.VideosLibrary.CreateFileAsync(fileName, Windows.Storage.CreationCollisionOption.GenerateUniqueName);
 				//message += $"{Environment.NewLine}start: {fileName}, ";
 				//txtBlock.Text = message;
@@ -85,11 +85,15 @@ namespace DashCam
 			mediaCapture = new MediaCapture();
 			await mediaCapture.InitializeAsync(captureInitSettings);
 
+			var properties = mediaCapture.VideoDeviceController;
+
 			// Add video stabilization effect during Live Capture
 			//Windows.Media.Effects.VideoEffectDefinition def = new Windows.Media.Effects.VideoEffectDefinition(Windows.Media.VideoEffects.VideoStabilization);
 			//await mediaCapture.AddVideoEffectAsync(def, MediaStreamType.VideoRecord);
 
 			profile = MediaEncodingProfile.CreateMp4(VideoEncodingQuality.Auto);
+			profile.Video.PixelAspectRatio.Numerator = 16;
+			profile.Video.PixelAspectRatio.Denominator = 9;
 
 			// Use MediaEncodingProfile to encode the profile
 			//System.Guid MFVideoRotationGuild = new System.Guid("C380465D-2271-428C-9B83-ECEA3B4A85C1");

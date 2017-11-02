@@ -25734,11 +25734,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\PersonalCode\\DashCam\\DashCam\\DashCam.csproj",
+      "projectUniqueName": "C:\\PersonalCode\\DashCam\\src\\DashCam\\DashCam.csproj",
       "projectName": "DashCam",
-      "projectPath": "C:\\PersonalCode\\DashCam\\DashCam\\DashCam.csproj",
+      "projectPath": "C:\\PersonalCode\\DashCam\\src\\DashCam\\DashCam.csproj",
       "packagesPath": "C:\\Users\\arjen.devries\\.nuget\\packages\\",
-      "outputPath": "C:\\PersonalCode\\DashCam\\DashCam\\obj\\",
+      "outputPath": "C:\\PersonalCode\\DashCam\\src\\DashCam\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
