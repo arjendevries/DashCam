@@ -10,61 +10,61 @@
     <PackageArchitecture>arm</PackageArchitecture>
     <PackageIdentityName>9cbb2f17-d36e-42e0-9ba1-4fb222724615</PackageIdentityName>
     <PackageIdentityPublisher>CN=arjen.devries</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\PersonalCode\DashCam\DashCam\obj\ARM\Release\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\PersonalCode\DashCam\src\DashCam\obj\ARM\Release\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\PersonalCode\DashCam\DashCam\bin\ARM\Release\AppX</LayoutDir>
+    <LayoutDir>C:\PersonalCode\DashCam\src\DashCam\bin\ARM\Release\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\PersonalCode\DashCam\DashCam\bin\ARM\Release\ilc\AppxManifest.xml">
+    <AppXManifest Include="C:\PersonalCode\DashCam\src\DashCam\bin\ARM\Release\ilc\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\PersonalCode\DashCam\DashCam\bin\ARM\Release\ilc\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\PersonalCode\DashCam\src\DashCam\bin\ARM\Release\ilc\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\PersonalCode\DashCam\DashCam\bin\ARM\Release\ilc\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\PersonalCode\DashCam\src\DashCam\bin\ARM\Release\ilc\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\PersonalCode\DashCam\DashCam\bin\ARM\Release\ilc\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\PersonalCode\DashCam\src\DashCam\bin\ARM\Release\ilc\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\PersonalCode\DashCam\DashCam\bin\ARM\Release\ilc\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\PersonalCode\DashCam\src\DashCam\bin\ARM\Release\ilc\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\PersonalCode\DashCam\DashCam\bin\ARM\Release\ilc\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\PersonalCode\DashCam\src\DashCam\bin\ARM\Release\ilc\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\PersonalCode\DashCam\DashCam\bin\ARM\Release\ilc\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\PersonalCode\DashCam\src\DashCam\bin\ARM\Release\ilc\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\PersonalCode\DashCam\DashCam\bin\ARM\Release\ilc\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\PersonalCode\DashCam\src\DashCam\bin\ARM\Release\ilc\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\PersonalCode\DashCam\DashCam\bin\ARM\Release\ilc\clrcompression.dll">
+    <AppxPackagedFile Include="C:\PersonalCode\DashCam\src\DashCam\bin\ARM\Release\ilc\clrcompression.dll">
       <PackagePath>clrcompression.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\PersonalCode\DashCam\DashCam\bin\ARM\Release\ilc\DashCam.dll">
+    <AppxPackagedFile Include="C:\PersonalCode\DashCam\src\DashCam\bin\ARM\Release\ilc\DashCam.dll">
       <PackagePath>DashCam.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\PersonalCode\DashCam\DashCam\bin\ARM\Release\ilc\DashCam.exe">
+    <AppxPackagedFile Include="C:\PersonalCode\DashCam\src\DashCam\bin\ARM\Release\ilc\DashCam.exe">
       <PackagePath>DashCam.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\PersonalCode\DashCam\DashCam\bin\ARM\Release\ilc\DashCam.pdb">
+    <AppxPackagedFile Include="C:\PersonalCode\DashCam\src\DashCam\bin\ARM\Release\ilc\DashCam.pdb">
       <PackagePath>DashCam.pdb</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\PersonalCode\DashCam\DashCam\bin\ARM\Release\ilc\resources.pri">
+    <AppxPackagedFile Include="C:\PersonalCode\DashCam\src\DashCam\bin\ARM\Release\ilc\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>

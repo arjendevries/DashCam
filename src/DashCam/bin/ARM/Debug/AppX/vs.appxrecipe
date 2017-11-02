@@ -10,7 +10,7 @@
     <PackageArchitecture>arm</PackageArchitecture>
     <PackageIdentityName>9cbb2f17-d36e-42e0-9ba1-4fb222724615</PackageIdentityName>
     <PackageIdentityPublisher>CN=arjen.devries</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\PersonalCode\DashCam\DashCam\obj\ARM\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\PersonalCode\DashCam\src\DashCam\obj\ARM\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,7 +18,7 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\PersonalCode\DashCam\DashCam\bin\ARM\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\PersonalCode\DashCam\src\DashCam\bin\ARM\Debug\AppX</LayoutDir>
     <RegisteredManifestChecksum>ECC9658A2D9606BAA955BCA508FD0733869EF86B2CFFA877806945D0D87AC27C</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>9cbb2f17-d36e-42e0-9ba1-4fb222724615_1.0.0.0_arm__xwdh6xsmkwgma</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>9cbb2f17-d36e-42e0-9ba1-4fb222724615_xwdh6xsmkwgma!App</RegisteredUserModeAppID>
@@ -28,16 +28,16 @@
     <JitOptimizationSuppressed>False</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\PersonalCode\DashCam\DashCam\bin\ARM\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\PersonalCode\DashCam\src\DashCam\bin\ARM\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-10-22T05:16:32.966</Modified>
+      <Modified>2017-10-26T04:39:09.968</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\PersonalCode\DashCam\DashCam\bin\ARM\Debug\DashCam.exe">
+    <AppxPackagedFile Include="C:\PersonalCode\DashCam\src\DashCam\bin\ARM\Debug\DashCam.exe">
       <PackagePath>entrypoint\DashCam.exe</PackagePath>
-      <Modified>2017-10-22T05:16:29.697</Modified>
+      <Modified>2017-10-26T04:39:09.105</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arjen.devries\.nuget\packages\microsoft.csharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -491,45 +491,45 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2016-06-12T06:15:04.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\PersonalCode\DashCam\DashCam\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\PersonalCode\DashCam\src\DashCam\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
       <Modified>2017-10-17T14:21:48.440</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\PersonalCode\DashCam\DashCam\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\PersonalCode\DashCam\src\DashCam\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
       <Modified>2017-10-17T04:51:20.893</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\PersonalCode\DashCam\DashCam\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\PersonalCode\DashCam\src\DashCam\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2017-10-17T04:51:20.893</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\PersonalCode\DashCam\DashCam\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\PersonalCode\DashCam\src\DashCam\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2017-10-17T04:51:20.893</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\PersonalCode\DashCam\DashCam\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\PersonalCode\DashCam\src\DashCam\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2017-10-17T04:51:20.893</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\PersonalCode\DashCam\DashCam\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\PersonalCode\DashCam\src\DashCam\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2017-10-17T04:51:20.893</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\PersonalCode\DashCam\DashCam\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\PersonalCode\DashCam\src\DashCam\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2017-10-17T04:51:20.893</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\PersonalCode\DashCam\DashCam\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\PersonalCode\DashCam\src\DashCam\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2017-10-17T04:51:20.893</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\PersonalCode\DashCam\DashCam\bin\ARM\Debug\DashCam.xr.xml">
+    <AppxPackagedFile Include="C:\PersonalCode\DashCam\src\DashCam\bin\ARM\Debug\DashCam.xr.xml">
       <PackagePath>DashCam.xr.xml</PackagePath>
       <Modified>2017-10-21T00:33:12.659</Modified>
     </AppxPackagedFile>
@@ -537,14 +537,14 @@
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2017-10-17T05:11:00.388</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\PersonalCode\DashCam\DashCam\bin\ARM\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\PersonalCode\DashCam\src\DashCam\bin\ARM\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-10-22T05:16:32.230</Modified>
+      <Modified>2017-10-26T03:29:45.320</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\PersonalCode\DashCam\DashCam\bin\ARM\Debug\Core\DashCam.exe">
+    <AppxPackagedFile Include="C:\PersonalCode\DashCam\src\DashCam\bin\ARM\Debug\Core\DashCam.exe">
       <PackagePath>DashCam.exe</PackagePath>
-      <Modified>2017-10-22T05:16:32.943</Modified>
+      <Modified>2017-10-26T04:39:09.945</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
