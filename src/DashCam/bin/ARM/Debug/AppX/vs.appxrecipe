@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\PersonalCode\DashCam\src\DashCam\bin\ARM\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-11-07T05:49:07.857</Modified>
+      <Modified>2017-11-08T06:38:26.453</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\PersonalCode\DashCam\src\DashCam\bin\ARM\Debug\DashCam.exe">
       <PackagePath>entrypoint\DashCam.exe</PackagePath>
-      <Modified>2017-11-07T05:49:06.762</Modified>
+      <Modified>2017-11-08T06:38:24.578</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\arjen.devries\.nuget\packages\microsoft.csharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -540,11 +540,11 @@
     <AppxPackagedFile Include="C:\PersonalCode\DashCam\src\DashCam\bin\ARM\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-11-07T05:21:10.693</Modified>
+      <Modified>2017-11-08T06:38:25.925</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\PersonalCode\DashCam\src\DashCam\bin\ARM\Debug\Core\DashCam.exe">
       <PackagePath>DashCam.exe</PackagePath>
-      <Modified>2017-11-07T05:49:07.832</Modified>
+      <Modified>2017-11-08T06:38:26.429</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

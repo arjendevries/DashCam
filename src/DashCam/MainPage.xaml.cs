@@ -24,6 +24,7 @@ namespace DashCam
 		public bool isRecording;
 		public string fileName;
 		public string message;
+	    public bool phoneIsDetected;
 
 		public MainPage()
 		{
@@ -32,7 +33,10 @@ namespace DashCam
 			InitCaptureSettings();
 
 			InitMediaCapture();
-		}
+
+		    IsPhoneDetected("");
+
+        }
 
 		public async Task StartMediaCaptureProcess()
 		{
@@ -53,9 +57,11 @@ namespace DashCam
 					//delay between start recording and stop recording
 					
 				}
-				//message += $"{Environment.NewLine}stop: {fileName}, ";
-				//txtBlock.Text = message;
-				await mediaCapture.StopRecordAsync();
+                //message += $"{Environment.NewLine}stop: {fileName}, ";
+                //txtBlock.Text = message;
+			    IsPhoneDetected("");
+
+                await mediaCapture.StopRecordAsync();
 				sw.Reset();
 			}
 		}
@@ -76,37 +82,6 @@ namespace DashCam
 			captureInitSettings = new MediaCaptureInitializationSettings();
 			captureInitSettings.StreamingCaptureMode = StreamingCaptureMode.AudioAndVideo;
 			captureInitSettings.PhotoCaptureSource = PhotoCaptureSource.VideoPreview;
-
-			//var deviceList = await DeviceInformation.FindAllAsync(DevicePairingResultStatus.AlreadyPaired);
-			//var isPhoneFound = deviceList.Where(IsPaired);
-			//var selector = BluetoothDevice.GetDeviceSelector();
-			var btDevices = await DeviceInformation.FindAllAsync(BluetoothDevice.GetDeviceSelector());
-			var btDevicesConnected = await DeviceInformation.FindAllAsync(BluetoothDevice.GetDeviceSelectorFromConnectionStatus(BluetoothConnectionStatus.Connected));
-			var test = await DeviceInformation.FindAllAsync(BluetoothDevice.GetDeviceSelectorFromPairingState(false));
-
-			var services =
-				await Windows.Devices.Enumeration.DeviceInformation.FindAllAsync(
-					RfcommDeviceService.GetDeviceSelector(
-						RfcommServiceId.ObexObjectPush));
-
-			if (services.Count > 0)
-			{
-				// Initialize the target Bluetooth BR device
-				var service = await RfcommDeviceService.FromIdAsync(services[0].Id);
-			}
-			
-
-			var watcher =
-				Windows.Devices.Enumeration.DeviceInformation.CreateWatcher();
-
-			//var isPhoneConnected = btDevices.FirstOrDefault().BluetoothConnectionStatus;
-
-			//var btDevices = await DeviceInformation.FindAllAsync(BluetoothDevice.GetDeviceSelectorFromConnectionStatus(BluetoothConnectionStatus.Connected));
-			if (btDevices != null)
-			{
-				var isPhoneDetected = btDevices?.FirstOrDefault().Id == "Bluetooth#Bluetoothb8:27:eb:29:3f:27-78:9f:70:b2:f7:85";
-				
-			}
 			
 			var devices = await DeviceInformation.FindAllAsync(DeviceClass.VideoCapture);
 			camera = devices.FirstOrDefault();
@@ -142,40 +117,71 @@ namespace DashCam
 			//DisplayInformation.AutoRotationPreferences = DisplayOrientations.None;
 		}
 
-		//private int ConvertVideoRotationToMFRotation(VideoRotation rotation)
-		//{
-		//	int MFVideoRotation = 0;
-		//	switch (rotation)
-		//	{
-		//		case VideoRotation.Clockwise90Degrees:
-		//			MFVideoRotation = 90;
-		//			break;
-		//		case VideoRotation.Clockwise180Degrees:
-		//			MFVideoRotation = 180;
-		//			break;
-		//		case VideoRotation.Clockwise270Degrees:
-		//			MFVideoRotation = 270;
-		//			break;
-		//	}
-		//	return MFVideoRotation;
-		//}
+        //private int ConvertVideoRotationToMFRotation(VideoRotation rotation)
+        //{
+        //	int MFVideoRotation = 0;
+        //	switch (rotation)
+        //	{
+        //		case VideoRotation.Clockwise90Degrees:
+        //			MFVideoRotation = 90;
+        //			break;
+        //		case VideoRotation.Clockwise180Degrees:
+        //			MFVideoRotation = 180;
+        //			break;
+        //		case VideoRotation.Clockwise270Degrees:
+        //			MFVideoRotation = 270;
+        //			break;
+        //	}
+        //	return MFVideoRotation;
+        //}
 
-		public async void startCaptureProcess(object sender, RoutedEventArgs e)
-		{
-			await StartMediaCaptureProcess();
-		}
+        public async void startCaptureProcess(object sender, RoutedEventArgs e)
+        {
+            await StartMediaCaptureProcess();
+        }
 
-		public async void stopCaptureProcess(object sender, RoutedEventArgs e)
-		{
-			await StopMediaCaptureProcess();
-		}
+        public async void stopCaptureProcess(object sender, RoutedEventArgs e)
+        {
+            await StopMediaCaptureProcess();
+        }
 
-		public string GenerateFileName(string fileExt)
+        public async void startCaptureProcess()
+	    {
+	        await StartMediaCaptureProcess();
+	    }
+
+	    public async void stopCaptureProcess()
+	    {
+	        await StopMediaCaptureProcess();
+	    }
+
+        public string GenerateFileName(string fileExt)
 		{
 			var time = DateTime.Now;
 
 			return $"{time.Year}-{time.Month.ToString("d2")}-{time.Day.ToString("d2")}-{time.Hour.ToString("d2")}-{time.Minute.ToString("d2")}-{time.Second.ToString("d2")}.{fileExt}";
 		}
+
+	    public async void IsPhoneDetected(string btId)
+	    {
+	        phoneIsDetected = false;
+            var btDevices = await DeviceInformation.FindAllAsync(BluetoothDevice.GetDeviceSelectorFromPairingState(false));
+	        foreach (var d in btDevices)
+	        {
+	            if (d.Id == btId)
+	            {
+	                phoneIsDetected = true;
+                }         
+	        }
+	        if (phoneIsDetected)
+	        {
+	            startCaptureProcess();
+            }
+	        else
+	        {
+	            stopCaptureProcess();
+            }
+        }
 
 		//private async void playVideo(object sender, RoutedEventArgs e)
 		//{
