@@ -1,1 +1,1 @@
-C:\PersonalCode\DashCam\DashCam\DashCam.csproj;x64
+C:\PersonalCode\DashCam\src\DashCam\DashCam.csproj;x64

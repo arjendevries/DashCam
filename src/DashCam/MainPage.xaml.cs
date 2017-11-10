@@ -10,8 +10,6 @@ using Windows.Media.MediaProperties;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
-
 namespace DashCam
 {
 	public sealed partial class MainPage : Page
@@ -24,58 +22,78 @@ namespace DashCam
 		public bool isRecording;
 		public string fileName;
 		public string message;
-	    public bool phoneIsDetected;
+	    //public bool phoneIsDetected;
 
 		public MainPage()
 		{
 			this.InitializeComponent();
 
-			InitCaptureSettings();
+			//InitCaptureSettings();
 
-			InitMediaCapture();
+			//InitMediaCapture();
 
-		    IsPhoneDetected("");
+		    //IsPhoneDetected("");
 
+		    MainAsync().Wait();
+
+
+		}
+
+	    public async Task MainAsync()
+	    {
+            //Stuff goes here
+
+	        //InitCaptureSettings();
+
+	        //InitMediaCapture();
         }
 
-		public async Task StartMediaCaptureProcess()
+        public async Task StartMediaCaptureProcess()
 		{
-			//message += $"{Environment.NewLine}start process:";
-			//txtBlock.Text = message;
-			var sw = new Stopwatch();
+            message += $"{Environment.NewLine}start process:";
+            txtBlock.Text = message;
 			isRecording = true;
 			while (isRecording)
 			{
-				sw.Start();
-				fileName = GenerateFileName("mp4");
-				var storageFile = await Windows.Storage.KnownFolders.VideosLibrary.CreateFileAsync(fileName, Windows.Storage.CreationCollisionOption.GenerateUniqueName);
-				//message += $"{Environment.NewLine}start: {fileName}, ";
-				//txtBlock.Text = message;
-				await mediaCapture.StartRecordToStorageFileAsync(profile, storageFile);
-				while (sw.Elapsed.TotalMilliseconds <= 60000)
-				{
-					//delay between start recording and stop recording
-					
-				}
-                //message += $"{Environment.NewLine}stop: {fileName}, ";
-                //txtBlock.Text = message;
-			    IsPhoneDetected("");
+			    fileName = GenerateFileName("mp4");
+			    var storageFile = await Windows.Storage.KnownFolders.VideosLibrary.CreateFileAsync(fileName, Windows.Storage.CreationCollisionOption.GenerateUniqueName);
+			    message += $"{Environment.NewLine}start: {fileName}, ";
+			    txtBlock.Text = message;
+                //await mediaCapture.StartRecordToStorageFileAsync(profile, storageFile);
 
-                await mediaCapture.StopRecordAsync();
-				sw.Reset();
-			}
-		}
+			    var task = VideoLength(6000);
+			    task.Wait();
+
+			    // B block
+			    message += $"{Environment.NewLine}stop: {fileName}";
+			    txtBlock.Text = message;
+			    //IsPhoneDetected("");
+			    //await mediaCapture.StopRecordAsync();
+            }
+        }
 
 		public async Task StopMediaCaptureProcess()
 		{
 			if (isRecording)
 			{
-				//message += $"{Environment.NewLine}stop process.";
-				//txtBlock.Text = message;
-				await mediaCapture.StopRecordAsync();
+                message += $"{Environment.NewLine}stop process.";
+                txtBlock.Text = message;
+                //await mediaCapture.StopRecordAsync();
 				isRecording = false;
 			}
 		}
+
+	    public static async Task<long> VideoLength(int time)
+	    {
+	        Stopwatch sw = Stopwatch.StartNew();
+            var delay = Task.Delay(time).ContinueWith(_ =>
+	        {
+	            sw.Stop();
+	            return sw.ElapsedMilliseconds;
+	        });
+
+	        return delay.Result;
+	    }
 
 		public async void InitCaptureSettings()
 		{
@@ -145,15 +163,27 @@ namespace DashCam
             await StopMediaCaptureProcess();
         }
 
-        public async void startCaptureProcess()
+	    public async void toggleCaptureProcess(object sender, RoutedEventArgs e)
 	    {
-	        await StartMediaCaptureProcess();
+	        if (isRecording)
+	        {
+	            await StopMediaCaptureProcess();
+	        }
+	        else
+	        {
+	            await StartMediaCaptureProcess();
+	        }
 	    }
 
-	    public async void stopCaptureProcess()
-	    {
-	        await StopMediaCaptureProcess();
-	    }
+     //   public async void startCaptureProcess()
+	    //{
+	    //    await StartMediaCaptureProcess();
+	    //}
+
+	    //public async void stopCaptureProcess()
+	    //{
+	    //    await StopMediaCaptureProcess();
+	    //}
 
         public string GenerateFileName(string fileExt)
 		{
@@ -162,26 +192,26 @@ namespace DashCam
 			return $"{time.Year}-{time.Month.ToString("d2")}-{time.Day.ToString("d2")}-{time.Hour.ToString("d2")}-{time.Minute.ToString("d2")}-{time.Second.ToString("d2")}.{fileExt}";
 		}
 
-	    public async void IsPhoneDetected(string btId)
-	    {
-	        phoneIsDetected = false;
-            var btDevices = await DeviceInformation.FindAllAsync(BluetoothDevice.GetDeviceSelectorFromPairingState(false));
-	        foreach (var d in btDevices)
-	        {
-	            if (d.Id == btId)
-	            {
-	                phoneIsDetected = true;
-                }         
-	        }
-	        if (phoneIsDetected)
-	        {
-	            startCaptureProcess();
-            }
-	        else
-	        {
-	            stopCaptureProcess();
-            }
-        }
+	    //public async void IsPhoneDetected(string btId)
+	    //{
+	    //    phoneIsDetected = false;
+     //       var btDevices = await DeviceInformation.FindAllAsync(BluetoothDevice.GetDeviceSelectorFromPairingState(false));
+	    //    foreach (var d in btDevices)
+	    //    {
+	    //        if (d.Id == btId)
+	    //        {
+	    //            phoneIsDetected = true;
+     //           }         
+	    //    }
+	    //    if (phoneIsDetected)
+	    //    {
+	    //        startCaptureProcess();
+     //       }
+	    //    else
+	    //    {
+	    //        stopCaptureProcess();
+     //       }
+     //   }
 
 		//private async void playVideo(object sender, RoutedEventArgs e)
 		//{
