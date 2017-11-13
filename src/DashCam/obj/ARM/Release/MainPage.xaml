@@ -9,11 +9,12 @@
 
 	<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 		<StackPanel Margin="10,0,10,20">
-			<Button x:ConnectionId='1' x:Name="btn1" Content="Start Capturing"                             Margin="10,10,0,0"></Button>
-			<Button x:ConnectionId='2' x:Name="btn2" Content="End Capturing"                            Margin="10, 10,0,0" Width="121"/>
+			<!--<Button x:Name="btn1" Content="Start Capturing" Click="startCaptureProcess" Margin="10,10,0,0"></Button>
+			<Button x:Name="btn2" Content="End Capturing" Click="stopCaptureProcess" Margin="10, 10,0,0" Width="121"></Button>-->
+			<Button x:ConnectionId='1' x:Name="btn1" Content="Toggle Capturing"                              Margin="10,10,0,0" Height="88" Width="563"></Button>
 			<!--<Button x:Name="btn3" Content="Play Captured Video" Click="playVideo" Margin="10, 10, 0,0"/>-->
 			<!--<TextBox Margin="0,0,0,5" TextAlignment="Center" BorderThickness="0"/>-->
-			<TextBlock x:ConnectionId='3' x:Name="txtBlock"/>
+			<TextBlock x:ConnectionId='2' x:Name="txtBlock"/>
 			<!--<CaptureElement Name="capturePreview" Height="120" Margin="10,0,0,10" Width="120"/>-->
 			<!--<TextBox Text="Video Review Window" Margin="10,0,0,5" TextAlignment="Center" BorderThickness="0"/>-->
 			<!--<MediaElement Name="media"

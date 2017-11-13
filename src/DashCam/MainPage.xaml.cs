@@ -22,19 +22,16 @@ namespace DashCam
 		public bool isRecording;
 		public string fileName;
 		public string message;
-	    //public bool phoneIsDetected;
 
 		public MainPage()
 		{
 			this.InitializeComponent();
 
-			//InitCaptureSettings();
+            InitCaptureSettings();
 
-			//InitMediaCapture();
+            InitMediaCapture();
 
-		    //IsPhoneDetected("");
-
-		    MainAsync().Wait();
+            MainAsync().Wait();
 
 
 		}
@@ -55,20 +52,26 @@ namespace DashCam
 			isRecording = true;
 			while (isRecording)
 			{
-			    fileName = GenerateFileName("mp4");
+			    fileName = GenerateFileName("wmv");
 			    var storageFile = await Windows.Storage.KnownFolders.VideosLibrary.CreateFileAsync(fileName, Windows.Storage.CreationCollisionOption.GenerateUniqueName);
 			    message += $"{Environment.NewLine}start: {fileName}, ";
 			    txtBlock.Text = message;
-                //await mediaCapture.StartRecordToStorageFileAsync(profile, storageFile);
+                
+                await mediaCapture.StartRecordToStorageFileAsync(profile, storageFile);
 
-			    var task = VideoLength(6000);
+			    var task = VideoLength(120000);
 			    task.Wait();
 
-			    // B block
-			    message += $"{Environment.NewLine}stop: {fileName}";
+               // VideoLength(6000).Wait();
+
+                //await Task.Delay(60000);
+
+                // Stop block
+                message += $"{Environment.NewLine}stop: {fileName}";
 			    txtBlock.Text = message;
-			    //IsPhoneDetected("");
-			    //await mediaCapture.StopRecordAsync();
+
+			    await mediaCapture.StopRecordAsync();
+
             }
         }
 
@@ -78,24 +81,24 @@ namespace DashCam
 			{
                 message += $"{Environment.NewLine}stop process.";
                 txtBlock.Text = message;
-                //await mediaCapture.StopRecordAsync();
+                await mediaCapture.StopRecordAsync();
 				isRecording = false;
 			}
 		}
 
-	    public static async Task<long> VideoLength(int time)
-	    {
-	        Stopwatch sw = Stopwatch.StartNew();
+        public static async Task<long> VideoLength(int time)
+        {
+            Stopwatch sw = Stopwatch.StartNew();
             var delay = Task.Delay(time).ContinueWith(_ =>
-	        {
-	            sw.Stop();
-	            return sw.ElapsedMilliseconds;
-	        });
+            {
+                sw.Stop();
+                return sw.ElapsedMilliseconds;
+            });
 
-	        return delay.Result;
-	    }
+            return delay.Result;
+        }
 
-		public async void InitCaptureSettings()
+        public async void InitCaptureSettings()
 		{
 			captureInitSettings = new MediaCaptureInitializationSettings();
 			captureInitSettings.StreamingCaptureMode = StreamingCaptureMode.AudioAndVideo;
@@ -191,27 +194,6 @@ namespace DashCam
 
 			return $"{time.Year}-{time.Month.ToString("d2")}-{time.Day.ToString("d2")}-{time.Hour.ToString("d2")}-{time.Minute.ToString("d2")}-{time.Second.ToString("d2")}.{fileExt}";
 		}
-
-	    //public async void IsPhoneDetected(string btId)
-	    //{
-	    //    phoneIsDetected = false;
-     //       var btDevices = await DeviceInformation.FindAllAsync(BluetoothDevice.GetDeviceSelectorFromPairingState(false));
-	    //    foreach (var d in btDevices)
-	    //    {
-	    //        if (d.Id == btId)
-	    //        {
-	    //            phoneIsDetected = true;
-     //           }         
-	    //    }
-	    //    if (phoneIsDetected)
-	    //    {
-	    //        startCaptureProcess();
-     //       }
-	    //    else
-	    //    {
-	    //        stopCaptureProcess();
-     //       }
-     //   }
 
 		//private async void playVideo(object sender, RoutedEventArgs e)
 		//{

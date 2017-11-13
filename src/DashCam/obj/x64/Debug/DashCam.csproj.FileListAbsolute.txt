@@ -335,6 +335,7 @@ C:\PersonalCode\DashCam\src\DashCam\bin\x64\Debug\System.Xml.ReaderWriter.dll
 C:\PersonalCode\DashCam\src\DashCam\bin\x64\Debug\System.Xml.XDocument.dll
 C:\PersonalCode\DashCam\src\DashCam\bin\x64\Debug\System.Xml.XmlDocument.dll
 C:\PersonalCode\DashCam\src\DashCam\bin\x64\Debug\System.Xml.XmlSerializer.dll
+C:\PersonalCode\DashCam\src\DashCam\obj\x64\Debug\DashCam.csprojResolveAssemblyReference.cache
 C:\PersonalCode\DashCam\src\DashCam\obj\x64\Debug\App.g.i.cs
 C:\PersonalCode\DashCam\src\DashCam\obj\x64\Debug\App.g.cs
 C:\PersonalCode\DashCam\src\DashCam\obj\x64\Debug\MainPage.g.i.cs

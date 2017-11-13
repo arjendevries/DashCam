@@ -333,7 +333,6 @@ C:\PersonalCode\DashCam\src\DashCam\bin\ARM\Debug\System.Xml.ReaderWriter.dll
 C:\PersonalCode\DashCam\src\DashCam\bin\ARM\Debug\System.Xml.XDocument.dll
 C:\PersonalCode\DashCam\src\DashCam\bin\ARM\Debug\System.Xml.XmlDocument.dll
 C:\PersonalCode\DashCam\src\DashCam\bin\ARM\Debug\System.Xml.XmlSerializer.dll
-C:\PersonalCode\DashCam\src\DashCam\obj\ARM\Debug\DashCam.csprojResolveAssemblyReference.cache
 C:\PersonalCode\DashCam\src\DashCam\obj\ARM\Debug\App.g.i.cs
 C:\PersonalCode\DashCam\src\DashCam\obj\ARM\Debug\App.g.cs
 C:\PersonalCode\DashCam\src\DashCam\obj\ARM\Debug\MainPage.g.i.cs
@@ -422,3 +421,4 @@ C:\PersonalCode\DashCam\src\DashCam\obj\ARM\Debug\qualifiers.txt
 C:\PersonalCode\DashCam\src\DashCam\obj\ARM\Debug\qualifiers.txt.intermediate
 C:\PersonalCode\DashCam\src\DashCam\obj\ARM\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\PersonalCode\DashCam\src\DashCam\obj\ARM\Debug\ProjectArchitectures.txt
+C:\PersonalCode\DashCam\src\DashCam\obj\ARM\Debug\DashCam.csprojResolveAssemblyReference.cache
